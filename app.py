@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import joblib
 
 # Load trained RandomForest model
 model = joblib.load("model.pkl")
@@ -33,3 +34,4 @@ if st.button("Predict"):
 
     st.write("Prediction:", "Yes" if pred == 1 else "No")
     st.write("Probabilities:", prob)
+
